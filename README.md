@@ -2,11 +2,17 @@
 Rewriting common Linux commands in the Go programming language
 
 ## Todo
-- [X] ls 
+- [X] ls
+- [ ] mkdir
+- [ ] touch
+- [ ] rm
 - [ ] cat
-- [ ] which
-- [ ] shuf
 - [ ] wc
+- [ ] grep
+- [ ] shuf
+- [ ] which
+
+### Additional
 - [ ] lolcat
 - [ ] cowsay
 - [ ] fortune
