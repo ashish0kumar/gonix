@@ -1,4 +1,4 @@
-# 🐧 gonix
+# gonix
 Rewriting common Linux commands in the Go programming language
 
 ## Todo
