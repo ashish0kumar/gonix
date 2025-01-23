@@ -2,6 +2,8 @@
 
 This is a simplified implementation of the `ls` command in the Go Programming language.
 
+![example](../examples/ls.png)
+
 ## Features
 
 - **Basic Listing:** Lists files and directories.
