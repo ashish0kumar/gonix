@@ -2,7 +2,7 @@
 
 This is a simplified implementation of the `ls` command in the Go Programming language.
 
-![example](../examples/ls.png)
+<img src="../examples/ls.png" alt="example" width="50%">
 
 ## Features
 
