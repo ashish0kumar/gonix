@@ -2,6 +2,8 @@
 
 This is a simplified implementation of the `mkdir` command in the Go programming language.
 
+<img src="../examples/mkdir.png" alt="example" width="50%">
+
 ## Features
 
 - **Basic Directory Creation:** Creates a new directory.
@@ -47,17 +49,13 @@ go build
 
     `./mkdir -v mydir`
 
-    **Output:**
-
-    `mkdir: created directory 'mydir'`
+    **Output:** `mkdir: created directory 'mydir'`
 
 - **With `-p` and `-v` Together**
 
     `./mkdir -p -v parent/child`
 
-    **Output:**
-
-    `mkdir: created directory 'parent/child'`
+    **Output:** `mkdir: created directory 'parent/child'`
 
 - **Creating Multiple Directories**
 
