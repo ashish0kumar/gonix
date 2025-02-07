@@ -31,36 +31,36 @@ go build
 
 ## Usage
 
-**Basic Directory Creation**
+- **Basic Directory Creation**
 
-`./mkdir mydir`
+    `./mkdir mydir`
 
-Creates mydir in the current directory.
+    Creates mydir in the current directory.
 
-**With `-p` (Create Parent Directories)**
+- **With `-p` (Create Parent Directories)**
 
-`./mkdir -p parent/child`
+    `./mkdir -p parent/child`
 
-Creates parent (if not existing) and child inside it.
+    Creates parent (if not existing) and child inside it.
 
-**With `-v` (Verbose Mode)**
+- **With `-v` (Verbose Mode)**
 
-`./mkdir -v mydir`
+    `./mkdir -v mydir`
 
-Output
+    **Output:**
 
-`mkdir: created directory 'mydir'`
+    `mkdir: created directory 'mydir'`
 
-**With `-p` and `-v` Together**
+- **With `-p` and `-v` Together**
 
-`./mkdir -p -v parent/child`
+    `./mkdir -p -v parent/child`
 
-Output:
+    **Output:**
 
-`mkdir: created directory 'parent/child'`
+    `mkdir: created directory 'parent/child'`
 
-**Creating Multiple Directories**
+- **Creating Multiple Directories**
 
-`./mkdir dir1 dir2 dir3`
+    `./mkdir dir1 dir2 dir3`
 
-Creates dir1, dir2, and dir3.
+    Creates dir1, dir2, and dir3.
