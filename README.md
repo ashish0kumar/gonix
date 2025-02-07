@@ -3,7 +3,7 @@ Rewriting common Linux commands in the Go programming language
 
 ## Todo
 - [X] ls
-- [ ] mkdir
+- [X] mkdir
 - [ ] touch
 - [ ] rm
 - [ ] cat
