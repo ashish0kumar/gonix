@@ -2,6 +2,8 @@
 
 This is a simplified implementation of the `touch` command in the Go programming language.
 
+<img src="../examples/touch.png" alt="example" width="50%">
+
 ## Features
 
 - **Create New Files:** Creates a file if it doesn’t exist.
