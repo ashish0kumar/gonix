@@ -3,6 +3,8 @@
 This is a simplified implementation of the `rm` command in the Go programming
 language.
 
+<img src="../examples/rm.png" alt="example" width="50%">
+
 ## Features
 
 - **Basic File Removal:** Deletes files from the filesystem.
