@@ -5,7 +5,7 @@ Rewriting common Linux commands in the Go programming language
 - [X] ls
 - [X] mkdir
 - [X] touch
-- [ ] rm
+- [X] rm
 - [ ] cat
 - [ ] wc
 - [ ] grep
