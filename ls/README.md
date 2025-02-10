@@ -32,7 +32,7 @@ cd gonix/ls
 - **Build the Go program:**
 
 ```bash
-go build
+go build ls.go
 ```
 
 ## Usage

@@ -27,7 +27,7 @@ cd gonix/touch
 - **Build the Go program:**
 
 ```bash
-go build
+go build touch.go
 ```
 
 ## Usage

@@ -28,7 +28,7 @@ cd gonix/mkdir
 - **Build the Go program:**
 
 ```bash
-go build
+go build mkdir.go
 ```
 
 ## Usage
