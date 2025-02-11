@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"flag"
 	"fmt"
 	"os"
 	"strings"
@@ -41,17 +42,40 @@ func countWords(line string) int {
 }
 
 func main() {
-	if len(os.Args) < 2 {
-		fmt.Println("Usage: wc <file>")
+	lFlag := flag.Bool("l", false, "Print line count")
+	wFlag := flag.Bool("w", false, "Print word count")
+	cFlag := flag.Bool("c", false, "Print byte count")
+
+	flag.Parse()
+	files := flag.Args()
+
+	if len(files) == 0 {
+		fmt.Println("Usage: wc [-l] [-w] [-c] <file>")
 		os.Exit(1)
 	}
 
-	filename := os.Args[1]
-	lines, words, bytes, err := countFile(filename)
-	if err != nil {
-		fmt.Printf("wc: %s: %v\n", filename, err)
-		os.Exit(1)
-	}
+	for _, filename := range files {
+		lines, words, bytes, err := countFile(filename)
+		if err != nil {
+			fmt.Printf("wc: %s: %v\n", filename, err)
+			continue
+		}
 
-	fmt.Printf("%d %d %d %s\n", lines, words, bytes, filename)
+		output := []string{}
+		if *lFlag {
+			output = append(output, fmt.Sprintf("%d", lines))
+		}
+		if *wFlag {
+			output = append(output, fmt.Sprintf("%d", words))
+		}
+		if *cFlag {
+			output = append(output, fmt.Sprintf("%d", bytes))
+		}
+
+		if len(output) == 0 {
+			output = append(output, fmt.Sprintf("%d %d %d", lines, words, bytes))
+		}
+
+		fmt.Printf("%s %s\n", strings.Join(output, " "), filename)
+	}
 }
