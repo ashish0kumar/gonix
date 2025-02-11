@@ -8,6 +8,16 @@ import (
 	"strings"
 )
 
+func countReader(reader *bufio.Scanner) (lines, words, bytes int) {
+	for reader.Scan() {
+		lines++
+		line := reader.Text()
+		words += countWords(line)
+		bytes += len(line) + 1
+	}
+	return
+}
+
 func countFile(filename string) (lines, words, bytes int, err error) {
 	file, err := os.Open(filename)
 	if err != nil {
@@ -16,18 +26,13 @@ func countFile(filename string) (lines, words, bytes int, err error) {
 	defer file.Close()
 
 	scanner := bufio.NewScanner(file)
-	for scanner.Scan() {
-		lines++
-		line := scanner.Text()
-		words += countWords(line)
-		bytes += len(line) + 1
-	}
+	lines, words, bytes = countReader(scanner)
 
 	if err := scanner.Err(); err != nil {
 		return 0, 0, 0, err
 	}
 
-	return lines, words, bytes, nil
+	return
 }
 
 func countWords(line string) int {
@@ -50,8 +55,10 @@ func main() {
 	files := flag.Args()
 
 	if len(files) == 0 {
-		fmt.Println("Usage: wc [-l] [-w] [-c] <file>")
-		os.Exit(1)
+		scanner := bufio.NewScanner(os.Stdin)
+		lines, words, bytes := countReader(scanner)
+		fmt.Println(formatOutput(lines, words, bytes, *lFlag, *wFlag, *cFlag))
+		return
 	}
 
 	for _, filename := range files {
@@ -60,22 +67,25 @@ func main() {
 			fmt.Printf("wc: %s: %v\n", filename, err)
 			continue
 		}
-
-		output := []string{}
-		if *lFlag {
-			output = append(output, fmt.Sprintf("%d", lines))
-		}
-		if *wFlag {
-			output = append(output, fmt.Sprintf("%d", words))
-		}
-		if *cFlag {
-			output = append(output, fmt.Sprintf("%d", bytes))
-		}
-
-		if len(output) == 0 {
-			output = append(output, fmt.Sprintf("%d %d %d", lines, words, bytes))
-		}
-
-		fmt.Printf("%s %s\n", strings.Join(output, " "), filename)
+		fmt.Printf("%s %s\n", formatOutput(lines, words, bytes, *lFlag, *wFlag, *cFlag), filename)
 	}
+}
+
+func formatOutput(lines, words, bytes int, lFlag, wFlag, cFlag bool) string {
+	output := []string{}
+	if lFlag {
+		output = append(output, fmt.Sprintf("%d", lines))
+	}
+	if wFlag {
+		output = append(output, fmt.Sprintf("%d", words))
+	}
+	if cFlag {
+		output = append(output, fmt.Sprintf("%d", bytes))
+	}
+
+	if len(output) == 0 {
+		output = append(output, fmt.Sprintf("%d %d %d", lines, words, bytes))
+	}
+
+	return strings.Join(output, " ")
 }
