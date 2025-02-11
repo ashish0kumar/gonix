@@ -6,7 +6,7 @@ Rewriting common Linux commands in the Go programming language
 - [X] mkdir
 - [X] touch
 - [X] rm
-- [ ] cat
+- [X] cat
 - [ ] wc
 - [ ] grep
 - [ ] shuf
