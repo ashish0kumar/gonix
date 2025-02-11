@@ -15,6 +15,7 @@ func countReader(reader *bufio.Scanner) (lines, words, bytes int) {
 		words += countWords(line)
 		bytes += len(line) + 1
 	}
+	fmt.Println()
 	return
 }
 
