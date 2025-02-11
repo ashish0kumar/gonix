@@ -2,6 +2,8 @@
 
 This is a simplified implementation of the `cat` command in the Go programming language.
 
+<img src="../examples/cat.png" alt="example" width="50%">
+
 ## Features
 
 - **Basic File Output:** Prints the contents of files.
