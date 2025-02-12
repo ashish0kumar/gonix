@@ -10,4 +10,4 @@ Rewriting common Linux commands in the Go programming language
 - [x] rm
 - [x] cat
 - [x] wc
-- [ ] grep
+- [x] grep
