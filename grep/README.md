@@ -3,6 +3,8 @@
 This is a simplified implementation of the `grep` command in the Go programming
 language.
 
+<img src="../examples/grep.png" alt="example" width="50%">
+
 ## Features
 
 - **Basic Pattern Matching:** Searches for a given pattern in a file.
