@@ -2,6 +2,8 @@
 
 This is a simplified implementation of the `wc` command in the Go programming language.
 
+<img src="../examples/wc.png" alt="example" width="50%">
+
 ## Features
 
 - **Line Count (`-l`):** Prints the number of lines.
