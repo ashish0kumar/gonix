@@ -9,5 +9,5 @@ Rewriting common Linux commands in the Go programming language
 - [x] touch
 - [x] rm
 - [x] cat
-- [ ] wc
+- [x] wc
 - [ ] grep
