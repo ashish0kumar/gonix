@@ -8,14 +8,14 @@ minimal versions of these tools while learning **systems programming** in Go.
 
 | **Command**       | **Description**                                                                          |
 | ----------------- | ---------------------------------------------------------------------------------------- |
-| [`ls`](/ls)       | Lists files and directories with support for hidden files and detailed views.            |
-| [`mkdir`](/mkdir) | Creates new directories.                                                                 |
-| [`touch`](/touch) | Creates empty files or updates timestamps of existing files.                             |
-| [`rm`](/rm)       | Removes files and directories (supports `-r` and `-f` flags).                            |
-| [`cat`](/cat)     | Prints file contents with optional line numbering (`-n`).                                |
-| [`wc`](/wc)       | Counts lines, words, and bytes in a file or from `stdin`.                                |
-| [`grep`](/grep)   | Searches for a pattern in files or `stdin`, supports case-insensitive search (`-i`).     |
-| [`curl`](/curl)   | Fetches content from a URL, follows redirects (`-L`), and saves output to a file (`-o`). |
+| [`ls`](/cmd/ls)       | Lists files and directories with support for hidden files and detailed views.            |
+| [`mkdir`](/cmd/mkdir) | Creates new directories.                                                                 |
+| [`touch`](/cmd/touch) | Creates empty files or updates timestamps of existing files.                             |
+| [`rm`](/cmd/rm)       | Removes files and directories (supports `-r` and `-f` flags).                            |
+| [`cat`](/cmd/cat)     | Prints file contents with optional line numbering (`-n`).                                |
+| [`wc`](/cmd/wc)       | Counts lines, words, and bytes in a file or from `stdin`.                                |
+| [`grep`](/cmd/grep)   | Searches for a pattern in files or `stdin`, supports case-insensitive search (`-i`).     |
+| [`curl`](/cmd/curl)   | Fetches content from a URL, follows redirects (`-L`), and saves output to a file (`-o`). |
 
 ## Installation
 
@@ -28,12 +28,11 @@ git clone https://github.com/ashish0kumar/gonix.git
 - **Navigate to a specific command's directory and build it:**
 
 ```bash
-cd gonix/<command> 
+cd gonix/cmd/<command> 
 go build <command>.go
 ```
 
-Replace `<command>` with any of the available commands, like `ls`, `rm`, `grep`,
-etc.
+Replace `<command>` with any of the available commands.
 
 ## Usage
 
@@ -55,3 +54,7 @@ Refer to each command’s subdirectory for detailed usage instructions.
 ## Contributions
 
 Feel free to contribute, suggest improvements, or report issues!
+
+## License
+
+[MIT](LICENSE)

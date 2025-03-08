@@ -1,9 +1,8 @@
-# Ignore compiled binaries
-**/cat
-**/curl
-**/grep
-**/ls
-**/mkdir
-**/rm
-**/touch
-**/wc
+cmd/cat/cat
+cmd/curl/curl
+cmd/grep/grep
+cmd/ls/ls
+cmd/mkdir/mkdir
+cmd/rm/rm
+cmd/touch/touch
+cmd/wc/wc
