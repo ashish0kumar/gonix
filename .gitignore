@@ -1,0 +1,9 @@
+# Ignore compiled binaries
+**/cat
+**/curl
+**/grep
+**/ls
+**/mkdir
+**/rm
+**/touch
+**/wc
