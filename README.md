@@ -6,15 +6,16 @@ minimal versions of these tools while learning **systems programming** in Go.
 
 ## Commands
 
-| **Command**       | **Description**                                                                      |
-| ----------------- | ------------------------------------------------------------------------------------ |
-| [`ls`](/ls)       | Lists files and directories with support for hidden files and detailed views.        |
-| [`mkdir`](/mkdir) | Creates new directories.                                                             |
-| [`touch`](/touch) | Creates empty files or updates timestamps of existing files.                         |
-| [`rm`](/rm)       | Removes files and directories (supports `-r` and `-f` flags).                        |
-| [`cat`](/cat)     | Prints file contents with optional line numbering (`-n`).                            |
-| [`wc`](/wc)       | Counts lines, words, and bytes in a file or from `stdin`.                            |
-| [`grep`](/grep)   | Searches for a pattern in files or `stdin`, supports case-insensitive search (`-i`). |
+| **Command**       | **Description**                                                                          |
+| ----------------- | ---------------------------------------------------------------------------------------- |
+| [`ls`](/ls)       | Lists files and directories with support for hidden files and detailed views.            |
+| [`mkdir`](/mkdir) | Creates new directories.                                                                 |
+| [`touch`](/touch) | Creates empty files or updates timestamps of existing files.                             |
+| [`rm`](/rm)       | Removes files and directories (supports `-r` and `-f` flags).                            |
+| [`cat`](/cat)     | Prints file contents with optional line numbering (`-n`).                                |
+| [`wc`](/wc)       | Counts lines, words, and bytes in a file or from `stdin`.                                |
+| [`grep`](/grep)   | Searches for a pattern in files or `stdin`, supports case-insensitive search (`-i`).     |
+| [`curl`](/curl)   | Fetches content from a URL, follows redirects (`-L`), and saves output to a file (`-o`). |
 
 ## Installation
 
